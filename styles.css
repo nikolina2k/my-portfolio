@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10%;    
+}
+
+body {
+    background-color: beige;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Ruda", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    padding: 10px;
+    margin: 20px;
+}
+
+li, a, button {
+    
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    color: black;
+}
+    
+
+.nav_links li a:hover {
+        background-color: beige;    
+}
+
+main {
+    display: table;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #48403A;
+    color: white;
+    margin-top: auto;
+  }
+
+

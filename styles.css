@@ -64,4 +64,15 @@ footer {
     margin-top: auto;
   }
 
+#btn {
+    background-color: #48403A;
+    border: none;
+    padding: 15px 44px;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+  #btn a {
+    color: white;
+  }
 

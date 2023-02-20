@@ -62,6 +62,9 @@ footer {
     background-color: #48403A;
     color: white;
     margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
 #btn {
@@ -74,5 +77,11 @@ footer {
 
   #btn a {
     color: white;
+  }
+ 
+  body div {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
   }
 

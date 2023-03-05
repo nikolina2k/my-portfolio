@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "module": "es6",
+      "target": "es6",
+      "sourceMap": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*"]
+  }
+  

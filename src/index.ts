@@ -1,5 +1,5 @@
 interface HW2Response {
-    comic_id: number;
+    text: string;
   }
   
   interface XKCDResponse {
@@ -21,8 +21,10 @@ interface HW2Response {
       "https://fwd.innopolis.app/api/hw2?email=n.dragicevic@innopolis.university"
     );
     let hw2Response: HW2Response = await response.json();
-    getComic(hw2Response.comic_id as number);
+    let comic_id = Number(hw2Response) as number;
+    getComic(comic_id);
   }
+  
   
   async function getComic(comic_id: number): Promise<void> {
     let response = await fetch(
@@ -36,7 +38,9 @@ interface HW2Response {
     let img_year = xkcdResponse.year;
     let img_month = xkcdResponse.month;
     let img_day = xkcdResponse.day;
-    let img_date = new Date(parseInt(img_year), parseInt(img_month) - 1, parseInt(img_day));
+    console.log(img_title);
+    //let img_date = new Date(parseInt(img_year), parseInt(img_month) - 1, parseInt(img_day));
+    let img_date = new Date(Date.UTC(parseInt(img_year), parseInt(img_month) - 1, parseInt(img_day)));
     const date = {
       weekday: "long" as const,
       year: "numeric" as const,
@@ -50,7 +54,6 @@ interface HW2Response {
     image.alt = img_alt;
     let title = document.getElementById("title") as HTMLHeadingElement;
     title.textContent = img_title;
-    // Set the comic date in a separate paragraph element
     let dateEl = document.getElementById("date") as HTMLParagraphElement;
     dateEl.textContent = comic_date;
   }
